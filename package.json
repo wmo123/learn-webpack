@@ -1,0 +1,22 @@
+{
+  "name": "learnwebpack",
+  "version": "1.0.0",
+  "description": "- 初始化： npm init 产生package.json文件   src：源文件   dist：目标文件",
+  "main": "index.js",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "html-webpack-plugin": "^4.5.0",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "scripts": {
+    "build": "webpack --mode=development",
+    "dev": "webpack-dev-server --open --mode=development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
