@@ -32,3 +32,42 @@ module.exports = {
   
 }
 
+- 引入图片
+```
+npm i file-loader url-loader -D
+```
+| ``file-loader``: 解析图片地址，把图片从源位置拷贝到目标位置，可以处理任意的二进制文件， bootstrap中的字体文件
+| ``url-loader``: 在文件比较小时，可以把文件直接变成base64字符串内嵌到页面中
+配置loader：
+```
+{
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            // loader: 'file-loader',
+            loader: 'url-loader',
+            options: {
+              esModule: false ,
+              outputPath: './images', // 文件在目标文件位置
+              limits: 10
+            }
+          }
+        ]
+        
+      },
+```
+
+引入图片的三种方式：
+- 背景图片；
+- js模块加载方式（require）；
+- html标签方式 <img src="./img/1.png" /> 
+```
+  npm i html-withimg-loader -D
+  {
+    test: /\.(html|html)/,
+    loader: 'html-withimg-loader',
+  }
+
+```
+
+
