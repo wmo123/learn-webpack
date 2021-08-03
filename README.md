@@ -60,7 +60,7 @@ npm i file-loader url-loader -D
 引入图片的三种方式：
 - 背景图片；
 - js模块加载方式（require）；
-- html标签方式 <img src="./img/1.png" /> 
+- html标签方式 ``<img src="./img/1.png" />``
 ```
   npm i html-withimg-loader -D
   {
